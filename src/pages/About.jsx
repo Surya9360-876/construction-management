@@ -1,0 +1,12 @@
+import { BadgeCheck, Boxes, Handshake, Target, Truck } from 'lucide-react'
+const values = [
+  { icon: BadgeCheck, title: 'Quality-focused supply', text: 'Clear material descriptions and organized inventory help customers choose the right product for their needs.' },
+  { icon: Handshake, title: 'Customer-first service', text: 'Keep customer details and order information in one workspace to support smoother communication.' },
+  { icon: Truck, title: 'Reliable coordination', text: 'Plan delivery dates and track order status so project teams can coordinate site requirements.' }
+]
+export default function About() {
+  return <div className="page-stack"><section className="about-hero"><span className="eyebrow">ABOUT VAD BROZ'S</span><h2>Materials that help<br /><em>build what matters.</em></h2><p>A sample construction materials management experience designed to make inventory, customer relationships and order tracking easier for growing businesses.</p><div className="about-metrics"><div><strong>08</strong><span>Sample materials</span></div><div><strong>03</strong><span>Service categories</span></div><div><strong>01</strong><span>Organized workspace</span></div></div><div className="about-illustration"><div className="about-sun" /><div className="about-silo silo-one" /><div className="about-silo silo-two" /><div className="about-silo silo-three" /><div className="about-ground" /><span className="about-stamp"><Boxes size={20} /> BUILT FOR THE TRADE</span></div></section>
+    <section className="section-heading"><div><h2>What we value</h2><p>The principles behind a better supply experience</p></div></section><section className="values-grid">{values.map(v => { const Icon = v.icon; return <article className="value-card" key={v.title}><span><Icon size={22} /></span><h3>{v.title}</h3><p>{v.text}</p></article> })}</section>
+    <section className="about-purpose"><div className="purpose-icon"><Target size={26} /></div><div><span className="eyebrow">OUR PURPOSE</span><h3>Make everyday operations feel more manageable.</h3><p>This training project brings React components, routing, Redux, hooks, forms and responsive design together in a practical business scenario. Company details and inventory are demonstration content and can be customized for real use.</p></div></section>
+  </div>
+}
